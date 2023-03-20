@@ -1,0 +1,28 @@
+/* Hacemos reset a todo el index*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.bloque{
+    margin: auto;
+    max-width: 1300px;
+    padding: 20px;
+}
+
+.boton{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 10px 30px;
+    border: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(60, 60, 60);
+}
+
+.boton:hover{
+    background-color: rgb(100, 0, 210);
+    color: white;
+    border-radius: 4px;
+}
