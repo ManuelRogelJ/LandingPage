@@ -5,15 +5,21 @@
         <meta name="author" content="Esteban Baeza Pérez">
         <meta name="description" content="Landing Page Trenzatress">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
         <link rel="stylesheet" href="css/styles.css">
         <title>Trenzatress SL</title> 
-        <script src="js/navigation.js"></script>
+        <script src="js/navigation.js" defer></script>
+
+        <!--Librería de JS SweetAlert-->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </head>
     <body>
         <header>
             <div>
+                <a><img src="media/img/WEB-Imagotipo-trenzatress-ocre.jpg" alt="Logo Trenzatress" class="logo" width="110" height="60"></a>
+                <button type="button" id="abrir" onclick="abrir()"><i class="bi bi-list"></i></button>
                 <nav>
-                    <a><img src="media/img/WEB-Imagotipo-trenzatress-ocre.jpg" alt="Logo Trenzatress" class="logo" width="110" height="60"></a>
+                    <button type="button" id="cerrar" onclick="cerrar()"><i class="bi bi-x"></i></button>
                     <ul>
                         <li><a href="Productos.html">Productos</a></li>
                         <li><a href="#sobrenosotros">Sobre nosotros</a></li>
@@ -59,7 +65,7 @@
                     <input placeholder="Asunto" class="asunto">
                     <input placeholder="Correo electrónico" class="correo">
                     <input placeholder="Tu mensaje" class="mensaje">
-                    <a href="" class="boton">Enviar</a>
+                    <button type="button" class="boton" onclick="enviar()">Enviar</button>
                 </div>
             </div>
         </section>
