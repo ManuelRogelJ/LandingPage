@@ -115,6 +115,11 @@ nav ul li a{
     background-color: #EDE0C9;
 }
 
+.bloque-presentacion{
+    display: flex;
+    justify-content: center;
+}
+
 .presentacion{
     text-align: justify;
     min-width: 500px;
@@ -131,6 +136,8 @@ nav ul li a{
 .imagen{
     margin: 20px;
     padding: 10px;
+    position: relative;
+    left: 100px;
 }
 
 .imagen img{
@@ -140,80 +147,49 @@ nav ul li a{
     border-radius: 5px;
 }
 
-.card{
-    margin: 20px;
-    padding: 10px;
-    text-align: justify;
-    font-size: 16px;
-    background-color: #d3b98d;
-    border: solid 2px #c29a56;
-    border-radius: 5px;
-    box-shadow: 5px 10px 18px;
-    width: 350px;
+#productos{
+    display: flex;
+    justify-content: center;
 }
 
-#formulario{
-    background-color: #EDE0C9;
-}
-
-#formulario input{
-    background-color: #ceb282;
-    border: solid 2px #c29a56;
-    border-radius: 4px;
-    height: 30px;
-    margin: 20px;
-}
-
-.bloque-formulario{
+#bloque-productos{
+    max-width: 1024px;
     display: grid;
-    grid-template-columns: 1fr 60px 1fr;
-    grid-template-rows: 0.1fr 0.1fr 0.1fr 1fr 0.5fr;
-    grid-template-areas: 
-    'h2 h2 h2'
-    'nombre . correo'
-    'telefono . asunto'
-    'mensaje mensaje mensaje'
-    'boton boton boton';
+    justify-content: center;
+    padding: 2%;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 1fr 1fr;
+    gap: 3%;
+    grid-template-areas:
+    "producto producto producto"
+    "producto producto producto";
 }
 
-.bloque-formulario button{
-    grid-area: boton;
-    width: 80px;
-    height: 35px;
-    text-align: center;
-    margin-left: 40%;
+.producto{
+    box-shadow: 5px 10px 18px;
+    border-radius: 5px;
 }
 
-.bloque-formulario .titulo{
-    grid-area: h2;
-    height: 50px;
+.producto img{
+    height: auto;
+    width: 100%;
+    border-radius: 4px;
 }
 
-.bloque-formulario .nombre{
-    grid-area: nombre;
-    height: 50px;
+.detalle-producto{
+    display: inline-flex;
+    width: 100%;
+    color: black;
 }
 
-.bloque-formulario .telefono{
-    grid-area: telefono;
-    height: 50px;
+.titulo{
+    width: 80%;
 }
 
-.bloque-formulario .correo{
-    grid-area: correo;
-    height: 50px;
+.precio{
+    width: 20%;
 }
 
-.bloque-formulario .asunto{
-    grid-area: asunto;
-    height: 50px;
-}
-
-#formulario .mensaje{
-    grid-area: mensaje;
-    width: 90%;
-    height: 100px;
-}
 
 footer{
     background-color: #EDE0C9;
@@ -221,48 +197,4 @@ footer{
 
 footer p{
     justify-content: center;
-}
-
-#abrir, #cerrar{
-    display: none;
-}
-
-@media screen and (max-width: 550px){
-    #abrir, #cerrar{
-        display: block;
-        border: 0;
-        font-size: 1.25rem;
-        background-color: transparent;
-        cursor: pointer;
-    }
-
-    #abrir{
-        color: black;
-    }
-
-    #cerrar{
-        color: white;
-    }
-
-    .nav{
-        opacity: 0;
-        visibility: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        gap: 1rem;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        background-color: #c29a56;
-        padding: 2rem;
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
-    }
-
-    .nav.visible {
-        opacity: 1;
-        visibility: visible;
-    }
-    
 }
